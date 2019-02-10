@@ -1,0 +1,13 @@
+<div><%= notification.user.email %> <%= notification.action %> you!</div>
+
+<%# notification.user who caused the notification %>
+
+<%# second user followed the first user %>
+
+<%# notification = Notification.create(recipient: User.first, user: User.last, action: "followed", notifiable: User.first) %>
+
+<%# ApplicationController.render partial: "notifications/#{notification.notifiable_type.underscore.pluralize}/#{notification.action}", locals: {notification: notification}, formats: [:html] %>
+
+<%# ApplicationController.render partial: "notifications/users/followed", notification: notification, formats: [:html] %>
+
+<%# "<div>excid3@gmail.com followed you! </div>" %>

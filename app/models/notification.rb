@@ -6,4 +6,6 @@ class Notification < ApplicationRecord
   belongs_to :recipient, class_name: "User" # to look up the users table...
   # id column is recipient id...
   belongs_to :notifiable, polymorphic: true
+
+  after_commit -> { NotificationRelayJob.perform_later(self) }
 end

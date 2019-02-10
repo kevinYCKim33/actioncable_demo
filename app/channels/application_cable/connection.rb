@@ -9,7 +9,8 @@ module ApplicationCable
 
     protected
       def find_verified_user
-        # we are using warden
+        # we are using warden via devise
+        # a bit different from doc example
         if current_user = env["warden"].user
           current_user
         else
