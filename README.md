@@ -1,24 +1,19 @@
-# README
+#pub/sub
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+subscription/unsubscription
 
-Things you may want to cover:
+user publishes to chatroom...
 
-* Ruby version
+peopel sbuscribed to that websocket gets that notification...
 
-* System dependencies
+concept is simple...
 
-* Configuration
+ActionCable more like wrapper of websockets
 
-* Database creation
+in order to orchestrate all that
 
-* Database initialization
+you're using redis pub/sub...
 
-* How to run the test suite
+you're publishing and subscribing...
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+that's how chat rooms work kevin...
